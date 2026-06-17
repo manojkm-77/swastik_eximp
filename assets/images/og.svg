@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="100%" height="100%" fill="#FAF8F3"/>
+  <text x="50" y="110" font-family="Helvetica,Arial,sans-serif" font-size="48" fill="#0D1B2A">Swastik Eximp</text>
+  <text x="50" y="170" font-family="Helvetica,Arial,sans-serif" font-size="28" fill="#0D1B2A">Connecting India to the World — Premium exports</text>
+  <g transform="translate(900,320)">
+    <circle r="120" fill="url(#g)"/>
+  </g>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#FF6F00"/><stop offset="1" stop-color="#0D1B2A"/></linearGradient>
+  </defs>
+</svg>

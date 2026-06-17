@@ -16,6 +16,21 @@ Quick start
 - GitHub Pages: push the repo to GitHub and enable Pages for the repository branch (no config required for a static site).
 - Netlify: connect the repo to Netlify, it will use `netlify.toml`. Netlify offers form handling and serverless functions if you need backend logic.
 
+Enhancements added by assistant
+
+- Sticky header with active link highlighting and smooth scroll.
+- Section entrance animations using IntersectionObserver.
+- Product inquiry modal with pre-fill feature and client-side validation.
+- WhatsApp floating CTA and cookie consent banner.
+- SEO: Open Graph tags, canonical, Organization schema, `sitemap.xml` and `robots.txt`.
+- CSS design tokens and responsive refinements down to 375px.
+
+Form submission examples
+
+- Formspree: set `data-endpoint="https://formspree.io/f/your-id"` on the form element.
+- EmailJS: follow EmailJS docs and set endpoint or use their client integration.
+
+
 Files
 
 - index.html — Main site (form has `data-netlify` and optional `data-endpoint`)
