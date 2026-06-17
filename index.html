@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Swastik Eximp — Connecting India to the World</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="description" content="Swastik Eximp — International exporters from India. Spices, textiles, agri-products and more.">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-container">
+        <a class="brand" href="#">Swastik Eximp</a>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <nav class="main-nav" id="main-nav">
+          <a href="#about">About</a>
+          <a href="#products">Products</a>
+          <a href="#why">Why Us</a>
+          <a href="#contact" class="cta">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <h1>Connecting India to the World</h1>
+            <p class="lead">Reliable exports of high-quality spices, textiles and agricultural products — tailored for global markets.</p>
+            <p><a href="#contact" class="btn btn-primary">Get In Touch</a></p>
+            <div class="trust-row">
+              <span class="badge">ISO Certified</span>
+              <span class="badge">On-time Delivery</span>
+              <span class="badge">Global Reach</span>
+            </div>
+          </div>
+          <div class="hero-visual" aria-hidden="true">
+            <img src="assets/images/hero.svg" alt="Globe illustration" class="globe-img">
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section about">
+        <div class="container">
+          <h2>About Swastik Eximp</h2>
+          <p>Swastik Eximp is an international export company based in India, delivering premium commodities to buyers worldwide. We combine deep market expertise, rigorous quality control and efficient logistics to serve distributors, wholesalers and retailers across regions.</p>
+        </div>
+      </section>
+
+      <section id="products" class="section products">
+        <div class="container">
+          <h2>Product Categories</h2>
+          <p class="muted">(Update specifics as needed)</p>
+          <div class="grid">
+            <div class="card">
+              <h3>Spices</h3>
+              <p>High-quality pepper, turmeric, cumin and other spices sourced from trusted farms.</p>
+            </div>
+            <div class="card">
+              <h3>Textiles</h3>
+              <p>Fabrics and finished garments with emphasis on craftsmanship and sustainable sourcing.</p>
+            </div>
+            <div class="card">
+              <h3>Agricultural Products</h3>
+              <p>Grains, pulses and specialty agri-commodities meeting international standards.</p>
+            </div>
+            <div class="card">
+              <h3>Other Commodities</h3>
+              <p>Custom export lines on request — food ingredients, herbs and more.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="why" class="section why">
+        <div class="container two-col">
+          <div>
+            <h2>Why Choose Us</h2>
+            <ul class="why-list">
+              <li><strong>Quality First:</strong> Strict quality checks and ISO-compliant processes.</li>
+              <li><strong>Reliable Logistics:</strong> Proven on-time delivery and global shipping partners.</li>
+              <li><strong>Market Expertise:</strong> Years of export experience and customs knowledge.</li>
+            </ul>
+          </div>
+          <div class="trust-badges">
+            <div class="badge-block">
+              <svg class="badge-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#FF9933"/></svg>
+              <div class="badge-text"><strong>ISO Certified</strong><span>Certified processes</span></div>
+            </div>
+            <div class="badge-block">
+              <svg class="badge-icon" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" fill="#0a2540"/></svg>
+              <div class="badge-text"><strong>On-time Delivery</strong><span>Logistics & tracking</span></div>
+            </div>
+            <div class="badge-block">
+              <svg class="badge-icon" viewBox="0 0 24 24"><path d="M2 12h20" stroke="#FF9933" stroke-width="2"/></svg>
+              <div class="badge-text"><strong>Global Reach</strong><span>Networks across continents</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="container">
+          <h2>Client Inquiry</h2>
+          <p>Tell us about your requirements — we'll get back with tailored quotes and lead-times.</p>
+          <form id="contact-form" class="contact-form" name="contact" data-netlify="true" data-endpoint="" novalidate>
+            <input type="hidden" name="form-name" value="contact">
+            <div class="form-grid">
+              <label><span>Name</span><input type="text" name="name" required></label>
+              <label><span>Company</span><input type="text" name="company"></label>
+              <label><span>Email</span><input type="email" name="email" required></label>
+              <label><span>Country</span><input type="text" name="country"></label>
+              <label class="full"><span>Product / Interest</span><input type="text" name="product"></label>
+              <label class="full"><span>Message</span><textarea name="message" rows="5"></textarea></label>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Send Inquiry</button>
+              <div id="form-msg" class="form-msg" role="status" aria-live="polite"></div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-left">© <span id="year"></span> Swastik Eximp — All rights reserved.</div>
+        <div class="footer-right social">
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          <a href="#" aria-label="Twitter">Twitter</a>
+          <a href="#" aria-label="Instagram">Instagram</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>
