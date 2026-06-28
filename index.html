@@ -1390,101 +1390,26 @@ footer{
 
 <!-- ─── CTA ────────────────────────────────────────────────────────── -->
 <section class="cta reveal" id="cta">
-  <div class="cta-container">
-    <div class="cta-left">
-      <h2>Secure Your Oil Supply Today</h2>
-      <p>Partner with Swastik Eximp for streamlined edible oil procurement, absolute compliance, and reliable B2B logistics tailored to your schedule.</p>
-      
-      <div class="cta-contact-row" style="flex-direction: column; gap: 16px; margin-top: 24px; align-items: flex-start;">
-        <div class="cta-contact-item">
-          <span><img src="assets/images/icon_whatsapp.png" style="height:18px; width:auto; vertical-align:middle; margin-right:8px;"> WhatsApp:</span>
-          <a href="https://wa.me/916363785364?text=Hello%20Swastik%20Eximp,%20I%20would%20like%20to%20get%20in%20touch." target="_blank" rel="noopener">Chat Now</a>
-        </div>
-        <div class="cta-contact-item">
-          <span><img src="assets/images/icon_phone.png" style="height:18px; width:auto; vertical-align:middle; margin-right:8px;"> Call:</span>
-          <a href="tel:+916363785364">+91 63637 85364</a>
-        </div>
-        <div class="cta-contact-item">
-          <span><img src="assets/images/icon_phone.png" style="height:18px; width:auto; vertical-align:middle; margin-right:8px;"> Alternative:</span>
-          <a href="tel:+919886759548">+91 98867 59548</a>
-        </div>
-      </div>
+  <h2>Secure Your Oil Supply Today</h2>
+  <p style="max-width: 520px; margin: 0 auto 36px; color: rgba(255,255,255,0.72);">Partner with Swastik Eximp for streamlined edible oil procurement, absolute compliance, and reliable logistics tailored to your manufacturing schedule.</p>
+  
+  <a href="#" onclick="openQuoteModal(''); return false;" class="cta-btn" style="margin-bottom: 36px;">
+    Get a Free Quote
+    <span class="cta-btn-icon">→</span>
+  </a>
+  
+  <div class="cta-contact-row" style="margin-top: 24px;">
+    <div class="cta-contact-item">
+      <span>WhatsApp:</span>
+      <a href="https://wa.me/916363785364?text=Hello%20Swastik%20Eximp,%20I%20would%20like%20to%20get%20in%20touch." target="_blank" rel="noopener">Chat Now</a>
     </div>
-    
-    <div class="cta-right">
-      <form class="quote-form" id="quoteForm" onsubmit="submitQuoteForm(event)">
-        <h3>Request a Bulk Quote</h3>
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="qCompany">Company Name *</label>
-            <input type="text" id="qCompany" placeholder="e.g. Swastik Foods Ltd" required>
-          </div>
-          <div class="form-group">
-            <label for="qGst">GSTIN (Optional)</label>
-            <input type="text" id="qGst" placeholder="e.g. 29AAAAA0000A1Z5">
-          </div>
-          <div class="form-group">
-            <label for="qName">Contact Person *</label>
-            <input type="text" id="qName" placeholder="Your Name" required>
-          </div>
-          <div class="form-group">
-            <label for="qPhone">Phone / WhatsApp *</label>
-            <input type="tel" id="qPhone" placeholder="10-digit number" required>
-          </div>
-          <div class="form-group">
-            <label for="qEmail">Email Address *</label>
-            <input type="email" id="qEmail" placeholder="email@company.com" required>
-          </div>
-          <div class="form-group">
-            <label for="qPrice">Target Price (₹/kg) (Optional)</label>
-            <input type="number" id="qPrice" min="1" placeholder="e.g. 130">
-          </div>
-          <div class="form-group">
-            <label for="qProduct">Product *</label>
-            <select id="qProduct" required>
-              <option value="">Select Oil Type</option>
-              <option value="CP10 Palm Oil">CP10 Palm Oil</option>
-              <option value="Refined Sunflower Oil">Refined Sunflower Oil</option>
-              <option value="Both Oils">Both CP10 & Sunflower</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="qQty">Quantity (Metric Tons) *</label>
-            <input type="number" id="qQty" min="1" placeholder="Minimum 1 MT" required>
-          </div>
-          <div class="form-group">
-            <label for="qPayment">Payment Terms Preferred *</label>
-            <select id="qPayment" required>
-              <option value="">Select Terms</option>
-              <option value="10% Advance + Balance on LR">10% Advance + Balance on LR</option>
-              <option value="Letter of Credit (LC)">Letter of Credit (LC)</option>
-              <option value="RTGS / Bank Transfer">RTGS / Bank Transfer</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="qTimeline">Delivery Timeline *</label>
-            <select id="qTimeline" required>
-              <option value="">Select Timeline</option>
-              <option value="Immediate (Within 7 Days)">Immediate (Within 7 Days)</option>
-              <option value="15 Days">Within 15 Days</option>
-              <option value="30 Days">Within 30 Days</option>
-              <option value="Regular Monthly Contract">Regular Monthly Contract</option>
-            </select>
-          </div>
-          <div class="form-group full-width">
-            <label for="qDest">Delivery Destination *</label>
-            <input type="text" id="qDest" placeholder="e.g. Bangalore, Karnataka" required>
-          </div>
-          <div class="form-group full-width">
-            <label for="qRemarks">Special Requirements / Remarks (Optional)</label>
-            <textarea id="qRemarks" placeholder="Any specific requirements (e.g. partial shipment instructions, quality parameters)..." rows="3"></textarea>
-          </div>
-        </div>
-        <button type="submit" class="quote-submit-btn">
-          <img src="assets/images/icon_whatsapp.png" style="height:18px; width:auto; vertical-align:middle; margin-right:8px;">
-          Send Quote via WhatsApp
-        </button>
-      </form>
+    <div class="cta-contact-item">
+      <span>Call:</span>
+      <a href="tel:+916363785364">+91 63637 85364</a>
+    </div>
+    <div class="cta-contact-item">
+      <span>Alternative:</span>
+      <a href="tel:+919886759548">+91 98867 59548</a>
     </div>
   </div>
 </section>
