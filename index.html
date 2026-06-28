@@ -1,211 +1,1453 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Swastik Eximp — Connecting India to the World</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <meta name="description" content="Swastik Eximp — International exporters from India. Spices, textiles, agri-products and more.">
-    <link rel="canonical" href="https://www.swastikeximp.com/">
-    <meta property="og:title" content="Swastik Eximp — Connecting India to the World">
-    <meta property="og:description" content="Premium exports from India: spices, textiles and agricultural products. Quality, compliance and global logistics.">
-    <meta property="og:image" content="assets/images/og.svg">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swastik Eximp — Your Edible Oil Import Solution</title>
+<meta name="description" content="Swastik Eximp is Karnataka's trusted B2B edible oil import agency. Sourcing premium CP10 Palm Oil and Refined Sunflower Oil from Malaysia & Thailand Ex-JNPT.">
+<link rel="canonical" href="https://swastikeximp.com/">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --red:#C8201A;
+  --red2:#A01815;
+  --black:#111110;
+  --white:#FFFFFF;
+  --off:#F7F7F5;
+  --gray:#6B6B6B;
+  --lgray:#E8E8E5;
+  --border:#EBEBEB;
+}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
+body{font-family:'Inter',sans-serif;background:#fff;color:var(--black);overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+img{display:block;max-width:100%;}
+::selection{background:var(--red);color:#fff;}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-thumb{background:var(--red);}
 
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Swastik Eximp",
-        "url": "https://www.swastikeximp.com/",
-        "logo": "https://www.swastikeximp.com/assets/images/og.svg",
-        "sameAs": []
+/* ─── NAV ─────────────────────────────────────────────────────── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 40px;height:64px;
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  transition:box-shadow 0.3s;
+}
+nav.scrolled{box-shadow:0 2px 24px rgba(0,0,0,0.06);}
+.nav-logo{display:flex;align-items:center;gap:10px;cursor:pointer;}
+.nav-logo-img{
+  height:44px;width:auto;
+  object-fit:contain;
+  display:block;
+}
+.nav-logo-mark{
+  width:32px;height:32px;background:var(--red);border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Manrope',sans-serif;font-size:12px;font-weight:800;color:#fff;
+  flex-shrink:0;
+}
+.nav-logo-text{font-family:'Manrope',sans-serif;font-size:15px;font-weight:700;color:var(--black);}
+.nav-links{display:flex;align-items:center;gap:32px;}
+.nav-links a{
+  font-size:13px;font-weight:500;color:#555;
+  transition:color 0.2s;position:relative;padding-bottom:2px;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:1.5px;
+  background:var(--red);transform:scaleX(0);transition:transform 0.2s;
+}
+.nav-links a:hover{color:var(--black);}
+.nav-links a:hover::after{transform:scaleX(1);}
+.nav-right{display:flex;align-items:center;gap:16px;}
+.nav-cta{
+  font-size:13px;font-weight:600;
+  background:var(--red);color:#fff;
+  padding:9px 20px;border-radius:100px;
+  transition:background 0.2s, transform 0.2s;
+}
+.nav-cta:hover{background:var(--red2);transform:translateY(-1px);}
+.nav-explore{
+  display:flex;align-items:center;gap:8px;
+  font-size:13px;font-weight:500;color:#555;
+}
+.nav-avatar{
+  width:32px;height:32px;border-radius:50%;
+  background:var(--black);
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:12px;font-weight:700;
+}
+
+/* ─── MOBILE NAV TOGGLE ──────────────────────────────────────── */
+.hamburger{
+  display:none;flex-direction:column;gap:5px;cursor:pointer;
+  background:none;border:none;padding:4px;
+}
+.hamburger span{
+  display:block;width:22px;height:2px;
+  background:var(--black);border-radius:2px;
+  transition:all 0.3s;
+}
+.mobile-menu{
+  display:none;position:fixed;top:64px;left:0;right:0;
+  background:rgba(255,255,255,0.98);backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  z-index:99;padding:16px 20px 20px;
+  flex-direction:column;gap:0;
+}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{
+  font-size:15px;font-weight:500;color:#333;
+  padding:14px 0;border-bottom:1px solid var(--border);
+  transition:color 0.2s;
+}
+.mobile-menu a:last-child{border-bottom:none;}
+.mobile-menu a:hover{color:var(--red);}
+
+/* ─── HERO ─────────────────────────────────────────────────────── */
+.hero{
+  padding-top:64px;
+  position:relative;overflow:hidden;
+  background:#fff;
+}
+.hero-headline{
+  text-align:center;
+  padding:44px 40px 0;
+}
+.hero-tagline{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(200,32,26,0.07);
+  border:1px solid rgba(200,32,26,0.15);
+  border-radius:100px;padding:6px 16px;
+  font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--red);margin-bottom:20px;
+}
+.hero-headline h1{
+  font-family:'Manrope',sans-serif;
+  font-size:clamp(48px,9vw,124px);
+  font-weight:900;
+  line-height:0.9;
+  letter-spacing:-0.04em;
+  color:var(--black);
+  text-transform:uppercase;
+  margin-bottom:0;
+}
+.hero-headline h1 .red-word{color:var(--red);}
+.hero-img-wrap{
+  position:relative;
+  margin:28px 40px 0;
+  border-radius:24px;
+  overflow:hidden;
+  height:clamp(320px,48vw,580px);
+}
+.hero-img-wrap img{
+  width:100%;height:100%;
+  object-fit:cover;object-position:center 40%;
+  filter:brightness(0.7);
+  transition:transform 8s ease;
+}
+.hero-img-wrap:hover img{transform:scale(1.03);}
+/* HERO OVERLAY CARDS */
+.hero-cards{
+  position:absolute;bottom:24px;left:24px;right:24px;
+  display:grid;grid-template-columns:1fr auto 1fr;
+  gap:16px;align-items:end;
+}
+.hero-card-left{
+  background:rgba(255,255,255,0.96);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-radius:16px;
+  padding:20px 24px;
+  max-width:300px;
+  border:1px solid rgba(255,255,255,0.8);
+}
+.hero-card-left h3{
+  font-family:'Manrope',sans-serif;
+  font-size:17px;font-weight:800;line-height:1.25;
+  color:var(--black);margin-bottom:14px;
+}
+.learn-more{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:12px;font-weight:600;color:var(--black);
+  text-transform:uppercase;letter-spacing:0.5px;
+  transition:gap 0.2s;
+}
+.learn-more:hover{gap:10px;}
+.learn-more .arr{
+  width:22px;height:22px;border-radius:50%;
+  background:var(--black);color:#fff;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:11px;
+}
+.hero-card-center{
+  background:var(--red);border-radius:50%;
+  width:56px;height:56px;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:20px;cursor:pointer;
+  transition:transform 0.3s, box-shadow 0.3s;align-self:center;
+  box-shadow:0 4px 20px rgba(200,32,26,0.4);
+}
+.hero-card-center:hover{transform:scale(1.12);box-shadow:0 8px 32px rgba(200,32,26,0.5);}
+.hero-card-right{
+  background:rgba(255,255,255,0.96);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-radius:16px;
+  padding:20px 24px;
+  display:flex;flex-direction:column;gap:12px;
+  margin-left:auto;max-width:320px;
+  border:1px solid rgba(255,255,255,0.8);
+}
+.hero-card-right p{
+  font-size:13px;font-weight:500;color:var(--black);line-height:1.6;
+}
+.hero-stats-row{display:flex;align-items:center;gap:16px;}
+.hero-rating{
+  display:flex;align-items:center;gap:6px;
+  font-family:'Manrope',sans-serif;font-size:22px;font-weight:800;
+}
+.stars{color:#F59E0B;font-size:11px;letter-spacing:1px;margin-bottom:2px;}
+.hero-rating-wrap{display:flex;flex-direction:column;}
+.hero-rating span{font-size:11px;color:var(--gray);font-family:'Inter',sans-serif;font-weight:400;}
+.hero-clients{
+  display:flex;align-items:center;gap:8px;
+}
+.avatar-stack{display:flex;}
+.avatar-stack div{
+  width:28px;height:28px;border-radius:50%;border:2px solid #fff;
+  background:var(--lgray);
+  display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;
+}
+.avatar-stack div:first-child{margin-left:0;}
+.avatar-stack div+div{margin-left:-8px;}
+.clients-text{font-size:11px;color:var(--gray);line-height:1.3;}
+.clients-text strong{color:var(--black);display:block;font-size:13px;}
+
+/* ─── MARQUEE ────────────────────────────────────────────────── */
+.marquee-wrap{
+  overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  padding:14px 0;margin-top:0;background:#fff;
+}
+.marquee-track{
+  display:flex;gap:0;
+  animation:marquee 28s linear infinite;
+  width:max-content;
+}
+.marquee-item{
+  display:flex;align-items:center;gap:10px;
+  padding:0 40px;white-space:nowrap;
+  font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#888;
+}
+.marquee-item .dot{
+  width:5px;height:5px;border-radius:50%;background:var(--red);flex-shrink:0;
+}
+@keyframes marquee{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+/* ─── ABOUT ─────────────────────────────────────────────────────── */
+.about{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:0;
+  padding:88px 40px;
+  max-width:1200px;margin:0 auto;
+  align-items:start;
+}
+.about-left{padding-right:64px;}
+.eyebrow{
+  display:inline-flex;align-items:center;
+  font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;
+  color:var(--red);margin-bottom:16px;
+}
+.eyebrow::before{content:'✦';margin-right:8px;font-size:9px;}
+.about h2,.section-h2{
+  font-family:'Manrope',sans-serif;
+  font-size:clamp(30px,4vw,50px);
+  font-weight:800;letter-spacing:-0.03em;
+  line-height:1.05;
+  color:var(--black);
+  margin-bottom:16px;
+}
+.about-desc{
+  font-size:14px;color:var(--gray);line-height:1.85;
+  max-width:380px;
+  margin-bottom:40px;
+}
+/* ACCORDION */
+.accord-list{border-top:1px solid var(--border);}
+.accord-item{border-bottom:1px solid var(--border);}
+.accord-trigger{
+  width:100%;display:flex;align-items:center;justify-content:space-between;
+  padding:18px 0;
+  font-family:'Manrope',sans-serif;
+  font-size:15px;font-weight:700;color:var(--black);
+  background:none;border:none;cursor:pointer;text-align:left;
+  gap:12px;
+  transition:color 0.2s;
+}
+.accord-trigger .acc-icon{
+  width:28px;height:28px;border-radius:50%;
+  border:1.5px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;color:var(--gray);flex-shrink:0;
+  transition:background 0.25s,color 0.25s,border-color 0.25s,transform 0.3s;
+}
+.accord-item.open .accord-trigger .acc-icon{
+  background:var(--red);border-color:var(--red);color:#fff;transform:rotate(45deg);
+}
+.accord-item.open .accord-trigger{color:var(--red);}
+.accord-body{
+  max-height:0;overflow:hidden;
+  transition:max-height 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+.accord-item.open .accord-body{max-height:200px;}
+.accord-body p{
+  font-size:13px;color:var(--gray);line-height:1.85;
+  padding-bottom:18px;
+}
+/* ABOUT RIGHT IMAGE */
+.about-right{
+  border-radius:20px;overflow:hidden;
+  height:500px;
+  position:relative;
+}
+.about-right img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform 6s ease;
+}
+.about-right:hover img{transform:scale(1.04);}
+.about-right-badge{
+  position:absolute;bottom:20px;left:20px;right:20px;
+  background:rgba(255,255,255,0.96);backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  border-radius:14px;padding:16px 20px;
+  display:flex;align-items:center;justify-content:space-between;
+  border:1px solid rgba(255,255,255,0.8);
+}
+.badge-label{font-size:10px;color:var(--gray);text-transform:uppercase;letter-spacing:1.2px;margin-bottom:3px;}
+.badge-val{font-family:'Manrope',sans-serif;font-size:17px;font-weight:800;}
+.badge-divider{width:1px;height:36px;background:var(--border);}
+
+/* ─── STATS ─────────────────────────────────────────────────────── */
+.stats{
+  background:var(--black);
+  border-radius:24px;
+  margin:0 40px 88px;
+  padding:60px 64px;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:48px;
+  align-items:center;
+}
+.stats-left h2{
+  font-family:'Manrope',sans-serif;
+  font-size:clamp(26px,3.5vw,40px);
+  font-weight:800;letter-spacing:-0.03em;
+  color:#fff;line-height:1.1;
+  margin-bottom:12px;
+}
+.stats-left p{font-size:13px;color:#888;line-height:1.85;max-width:300px;margin-bottom:24px;}
+.stats-cta{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;font-weight:600;color:var(--red);
+  border:1px solid rgba(200,32,26,0.3);border-radius:100px;
+  padding:8px 18px;transition:background 0.2s,color 0.2s;
+}
+.stats-cta:hover{background:var(--red);color:#fff;border-color:var(--red);}
+.stats-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:36px;
+}
+.stat-item{
+  padding:20px;background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.07);border-radius:16px;
+  transition:background 0.2s;
+}
+.stat-item:hover{background:rgba(255,255,255,0.07);}
+.stat-val{
+  font-family:'Manrope',sans-serif;
+  font-size:clamp(28px,3.5vw,48px);font-weight:800;
+  color:var(--red);letter-spacing:-0.03em;
+  line-height:1;margin-bottom:6px;
+}
+.stat-label{font-size:12px;color:#888;line-height:1.5;}
+
+/* ─── SERVICES ─────────────────────────────────────────────────── */
+.services{padding:88px 0 88px 40px;}
+.services-header{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  padding-right:40px;margin-bottom:12px;
+}
+.services-header h2{
+  font-family:'Manrope',sans-serif;
+  font-size:clamp(30px,4vw,50px);
+  font-weight:800;letter-spacing:-0.03em;
+  line-height:1.05;
+}
+.services-count{
+  font-family:'Manrope',sans-serif;font-size:13px;font-weight:600;
+  color:var(--gray);border:1px solid var(--border);border-radius:100px;
+  padding:6px 14px;margin-bottom:8px;
+}
+.services-desc{font-size:14px;color:var(--gray);line-height:1.85;max-width:360px;padding-right:40px;margin-bottom:40px;}
+/* HORIZONTAL SCROLL */
+.services-scroll{
+  display:flex;gap:20px;overflow-x:auto;padding-right:40px;padding-bottom:8px;
+  scrollbar-width:none;-ms-overflow-style:none;
+  cursor:grab;
+}
+.services-scroll:active{cursor:grabbing;}
+.services-scroll::-webkit-scrollbar{display:none;}
+.service-card{
+  flex:0 0 284px;
+  border:1.5px solid var(--border);border-radius:22px;
+  padding:28px 24px 24px;
+  transition:border-color 0.3s,transform 0.3s,box-shadow 0.3s;
+  cursor:default;background:#fff;
+  display:flex;flex-direction:column;
+}
+.service-card:hover{border-color:var(--red);transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,0.07);}
+.service-icon{
+  width:48px;height:48px;border-radius:14px;
+  background:var(--off);
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;margin-bottom:20px;
+  transition:background 0.25s,transform 0.25s;
+}
+.service-card:hover .service-icon{background:rgba(200,32,26,0.08);transform:scale(1.08);}
+.service-name{
+  font-family:'Manrope',sans-serif;
+  font-size:16px;font-weight:700;
+  color:var(--black);margin-bottom:10px;
+}
+.service-desc{font-size:13px;color:var(--gray);line-height:1.75;flex:1;}
+.service-link{
+  display:inline-flex;align-items:center;gap:5px;margin-top:16px;
+  font-size:11px;font-weight:600;color:var(--red);
+  text-transform:uppercase;letter-spacing:0.5px;opacity:0;
+  transition:opacity 0.2s;
+}
+.service-card:hover .service-link{opacity:1;}
+.services-nav{
+  display:flex;gap:10px;margin-top:28px;padding-right:40px;
+  justify-content:flex-start;
+}
+.snav-btn{
+  width:40px;height:40px;border-radius:50%;
+  border:1.5px solid var(--border);
+  background:#fff;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;transition:all 0.2s;
+}
+.snav-btn:hover,.snav-btn.act{background:var(--red);border-color:var(--red);color:#fff;}
+
+/* ─── TRACK ─────────────────────────────────────────────────────── */
+.track{
+  background:var(--black);
+  border-radius:24px;
+  margin:0 40px 88px;
+  padding:64px;
+  position:relative;overflow:hidden;
+}
+.track-content{position:relative;z-index:2;}
+.track h2{
+  font-family:'Manrope',sans-serif;
+  font-size:clamp(26px,3.5vw,42px);
+  font-weight:800;letter-spacing:-0.03em;
+  color:#fff;margin-bottom:10px;
+}
+.track-sub{font-size:14px;color:#666;margin-bottom:28px;max-width:360px;line-height:1.7;}
+.track-input-wrap{
+  display:flex;align-items:center;gap:0;
+  background:rgba(255,255,255,0.07);
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:100px;
+  padding:5px 5px 5px 24px;
+  max-width:480px;
+  margin-bottom:48px;
+  transition:border-color 0.2s;
+}
+.track-input-wrap:focus-within{border-color:rgba(200,32,26,0.5);}
+.track-input{
+  flex:1;background:none;border:none;outline:none;
+  font-size:14px;color:#fff;font-family:'Inter',sans-serif;
+  min-width:0;
+}
+.track-input::placeholder{color:rgba(255,255,255,0.3);}
+.track-submit{
+  background:var(--red);color:#fff;
+  border:none;border-radius:100px;
+  padding:11px 22px;font-size:12px;font-weight:600;
+  cursor:pointer;white-space:nowrap;
+  transition:background 0.2s,transform 0.2s;
+  letter-spacing:0.3px;
+}
+.track-submit:hover{background:var(--red2);transform:scale(1.02);}
+/* WORLD MAP SVG */
+.world-map{
+  position:absolute;bottom:0;left:0;right:0;
+  opacity:0.12;pointer-events:none;
+}
+.map-dots{
+  display:flex;gap:28px;flex-wrap:wrap;
+  position:relative;z-index:2;
+}
+.route-line{
+  display:none;
+  position:absolute;top:50%;left:0;right:0;height:1px;
+  background:linear-gradient(90deg, var(--red), transparent);
+  z-index:1;
+}
+.map-dot{
+  display:flex;align-items:center;gap:10px;
+  position:relative;
+}
+.map-dot:not(:last-child)::after{
+  content:'›';position:absolute;right:-18px;
+  color:rgba(255,255,255,0.2);font-size:16px;
+}
+.dot-circle{
+  width:38px;height:38px;border-radius:50%;
+  border:1.5px solid rgba(255,255,255,0.15);
+  display:flex;align-items:center;justify-content:center;
+  font-size:10px;font-weight:600;color:rgba(255,255,255,0.5);
+  transition:all 0.3s;
+}
+.dot-circle.active{
+  background:var(--red);border-color:var(--red);
+  color:#fff;box-shadow:0 0 16px rgba(200,32,26,0.4);
+}
+.dot-label{font-size:12px;color:rgba(255,255,255,0.45);line-height:1.4;}
+/* TRACK RESULT */
+.track-result{
+  margin-top:20px;
+  background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);
+  border-radius:16px;padding:20px 24px;
+  max-width:480px;display:none;
+}
+.track-result.show{display:block;}
+.track-result-title{font-family:'Manrope',sans-serif;font-size:14px;font-weight:700;color:#fff;margin-bottom:8px;}
+.track-result-status{font-size:13px;color:#888;line-height:1.6;}
+.track-result-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(200,32,26,0.2);color:var(--red);
+  border-radius:100px;padding:4px 12px;font-size:11px;font-weight:600;
+  margin-top:8px;
+}
+
+/* ─── FAQ ────────────────────────────────────────────────────────── */
+.faq{
+  display:grid;grid-template-columns:1fr 1.7fr;
+  gap:0;padding:88px 40px;
+  max-width:1200px;margin:0 auto;
+  align-items:start;
+}
+.faq-left{padding-right:40px;}
+.faq-left h2{
+  font-family:'Manrope',sans-serif;
+  font-size:clamp(26px,3.5vw,42px);
+  font-weight:800;letter-spacing:-0.03em;
+  line-height:1.1;
+  margin-bottom:16px;
+}
+.faq-left p{font-size:13px;color:var(--gray);line-height:1.85;max-width:200px;margin-bottom:24px;}
+.faq-contact-link{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:13px;font-weight:600;color:var(--red);
+  text-decoration:none;
+}
+.faq-contact-link:hover{text-decoration:underline;}
+.faq-list{border-top:1px solid var(--border);}
+.faq-item{border-bottom:1px solid var(--border);}
+.faq-trigger{
+  width:100%;display:flex;align-items:center;justify-content:space-between;
+  padding:20px 0;
+  font-size:15px;font-weight:500;color:var(--black);
+  background:none;border:none;cursor:pointer;text-align:left;
+  gap:16px;transition:color 0.2s;
+}
+.faq-item.open .faq-trigger{color:var(--red);}
+.faq-trigger .fq-icon{
+  width:24px;height:24px;border-radius:50%;
+  border:1.5px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;color:var(--gray);flex-shrink:0;
+  transition:all 0.3s;
+}
+.faq-item.open .faq-trigger .fq-icon{
+  background:var(--red);border-color:var(--red);color:#fff;
+  transform:rotate(45deg);
+}
+.faq-body{
+  max-height:0;overflow:hidden;
+  transition:max-height 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+.faq-item.open .faq-body{max-height:220px;}
+.faq-body p{font-size:13px;color:var(--gray);line-height:1.85;padding-bottom:20px;}
+
+/* ─── PRODUCTS SECTION ───────────────────────────────────────── */
+.products{
+  padding:0 40px 88px;
+  max-width:1200px;margin:0 auto;
+}
+.products-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px;
+}
+.product-card{
+  border-radius:22px;overflow:hidden;position:relative;
+  background:var(--off);
+  display:flex;flex-direction:column;
+}
+.product-card-img{
+  height:200px;overflow:hidden;
+}
+.product-card-img img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform 6s ease;
+}
+.product-card:hover .product-card-img img{transform:scale(1.06);}
+.product-card-body{padding:24px;}
+.product-tag{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--red);background:rgba(200,32,26,0.07);border-radius:100px;
+  padding:4px 12px;margin-bottom:12px;
+}
+.product-name{
+  font-family:'Manrope',sans-serif;font-size:20px;font-weight:800;
+  color:var(--black);margin-bottom:8px;
+}
+.product-desc{font-size:13px;color:var(--gray);line-height:1.75;margin-bottom:20px;}
+.product-meta{display:flex;align-items:center;justify-content:space-between;}
+.product-price{font-family:'Manrope',sans-serif;font-size:22px;font-weight:800;color:var(--black);}
+.product-price small{font-size:12px;font-weight:400;color:var(--gray);}
+.product-btn{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--black);color:#fff;
+  font-size:12px;font-weight:600;border-radius:100px;
+  padding:9px 18px;transition:background 0.2s;
+}
+.product-btn:hover{background:var(--red);}
+
+/* ─── CTA ────────────────────────────────────────────────────────── */
+.cta{
+  margin:0 40px 0;
+  background:var(--red);
+  border-radius:24px 24px 0 0;
+  padding:88px 60px;
+  text-align:center;
+  position:relative;overflow:hidden;
+}
+.cta::before{
+  content:'';position:absolute;
+  top:-80px;left:50%;transform:translateX(-50%);
+  width:600px;height:600px;border-radius:50%;
+  background:rgba(255,255,255,0.04);
+  pointer-events:none;
+}
+.cta::after{
+  content:'';position:absolute;
+  bottom:-100px;right:-80px;
+  width:400px;height:400px;border-radius:50%;
+  background:rgba(0,0,0,0.06);
+  pointer-events:none;
+}
+.cta h2{
+  font-family:'Manrope',sans-serif;
+  font-size:clamp(32px,5vw,68px);
+  font-weight:800;letter-spacing:-0.03em;
+  color:#fff;line-height:1.0;
+  margin-bottom:16px;position:relative;z-index:1;
+}
+.cta p{
+  font-size:15px;color:rgba(255,255,255,0.72);
+  max-width:420px;margin:0 auto 36px;line-height:1.75;
+  position:relative;z-index:1;
+}
+.cta-btn{
+  display:inline-flex;align-items:center;gap:10px;
+  background:#fff;color:var(--red);
+  font-family:'Manrope',sans-serif;
+  font-size:14px;font-weight:700;
+  padding:14px 28px;border-radius:100px;
+  transition:transform 0.2s,box-shadow 0.2s;
+  position:relative;z-index:1;
+}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 10px 40px rgba(0,0,0,0.25);}
+.cta-btn-icon{
+  width:32px;height:32px;border-radius:50%;
+  background:var(--red);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;
+}
+.cta-contact-row{
+  display:flex;align-items:center;justify-content:center;gap:32px;
+  margin-top:36px;position:relative;z-index:1;
+  flex-wrap:wrap;
+}
+.cta-contact-item{
+  display:flex;align-items:center;gap:8px;
+  font-size:13px;color:rgba(255,255,255,0.7);
+}
+.cta-contact-item a{color:#fff;font-weight:600;}
+
+/* ─── FOOTER ─────────────────────────────────────────────────────── */
+footer{
+  background:#fff;border-top:1px solid var(--border);
+  padding:44px 40px 32px;
+}
+.footer-top{
+  display:flex;justify-content:space-between;
+  flex-wrap:wrap;gap:32px;
+  max-width:1200px;margin:0 auto 32px;
+  padding-bottom:32px;
+  border-bottom:1px solid var(--border);
+}
+.footer-brand p{
+  font-size:13px;color:var(--gray);line-height:1.75;max-width:240px;margin-top:12px;
+}
+.footer-col h4{
+  font-family:'Manrope',sans-serif;font-size:12px;font-weight:700;
+  text-transform:uppercase;letter-spacing:1.5px;color:#999;margin-bottom:16px;
+}
+.footer-col a, .footer-col span{
+  display:block;font-size:13px;color:var(--gray);
+  margin-bottom:10px;transition:color 0.2s;
+}
+.footer-col a:hover{color:var(--red);}
+.footer-bottom{
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:12px;
+  max-width:1200px;margin:0 auto;
+}
+.footer-copy{font-size:11px;color:#aaa;}
+.footer-social{display:flex;gap:10px;}
+.social-icon{
+  width:32px;height:32px;border-radius:50%;border:1.5px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;color:var(--gray);cursor:pointer;
+  transition:all 0.2s;font-weight:600;
+}
+.social-icon:hover{background:var(--red);border-color:var(--red);color:#fff;}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────────────── */
+@media(max-width:1024px){
+  .products-grid{grid-template-columns:1fr;}
+}
+@media(max-width:900px){
+  nav{padding:0 20px;}
+  .nav-links,.nav-explore{display:none;}
+  .hamburger{display:flex;}
+  .hero-headline{padding:28px 20px 0;}
+  .hero-img-wrap{
+    margin:16px 20px 0;
+    border-radius:16px;
+    height:auto;
+    overflow:visible;
+    background:none;
+  }
+  .hero-img-wrap img{
+    height:240px;
+    border-radius:16px;
+  }
+  .hero-cards{
+    position:relative;
+    bottom:auto;left:auto;right:auto;
+    grid-template-columns:1fr;
+    gap:16px;
+    margin-top:16px;
+  }
+  .hero-card-left, .hero-card-right{
+    max-width:100%;
+    background:#fff;
+    border:1px solid var(--border);
+  }
+  .hero-card-center{display:none;}
+  .hero-card-right{margin-left:0;}
+  .about{grid-template-columns:1fr;padding:52px 20px;}
+  .about-left{padding-right:0;margin-bottom:36px;}
+  .about-right{height:320px;}
+  .stats{margin:0 20px 52px;padding:40px 28px;grid-template-columns:1fr;}
+  .services{padding:52px 0 52px 20px;}
+  .services-header{padding-right:20px;flex-direction:column;align-items:flex-start;gap:10px;}
+  .services-desc{padding-right:20px;}
+  .services-scroll{padding-right:20px;}
+  .services-nav{padding-right:20px;}
+  .track{margin:0 20px 52px;padding:40px 24px;}
+  .map-dot:not(:last-child)::after{display:none;}
+  .faq{grid-template-columns:1fr;padding:52px 20px;gap:36px;}
+  .faq-left{padding-right:0;}
+  .faq-left p,.faq-contact-link{display:none;}
+  .products{padding:0 20px 52px;}
+  .products-grid{grid-template-columns:1fr;}
+  .cta{margin:0 20px 0;padding:56px 24px;border-radius:20px 20px 0 0;}
+  footer{padding:36px 20px 24px;}
+  .footer-top{gap:24px;}
+}
+@media(max-width:480px){
+  .hero-headline h1{font-size:clamp(38px,12vw,72px);}
+  .stats-grid{grid-template-columns:1fr 1fr;}
+}
+
+/* ─── ANIMATIONS ─────────────────────────────────────────────────── */
+.reveal{
+  opacity:0;transform:translateY(32px);
+  transition:opacity 0.75s cubic-bezier(0.22,1,0.36,1),transform 0.75s cubic-bezier(0.22,1,0.36,1);
+}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal-delay-1{transition-delay:0.1s;}
+.reveal-delay-2{transition-delay:0.22s;}
+.reveal-delay-3{transition-delay:0.34s;}
+.reveal-delay-4{transition-delay:0.46s;}
+
+/* Number counter animation */
+.stat-val[data-target]{transition:all 0.3s;}
+
+/* Pulse dot */
+@keyframes pulse{
+  0%,100%{box-shadow:0 0 0 0 rgba(200,32,26,0.4);}
+  50%{box-shadow:0 0 0 8px rgba(200,32,26,0);}
+}
+.dot-circle.active{animation:pulse 2.5s infinite;}
+</style>
+</head>
+<body>
+
+<!-- ─── NAV ──────────────────────────────────────────────── -->
+<nav id="nav">
+  <a href="#" class="nav-logo">
+    <img src="assets/images/logo.png" alt="Swastik Eximp Logo" class="nav-logo-img" style="height:48px; width:auto; object-fit:contain; display:block;">
+  </a>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#products">Products</a>
+    <a href="#track">Track</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <div class="nav-right">
+    <a href="https://wa.me/916363785364?text=Hello%20Swastik%20Eximp,%20I%20would%20like%20to%20inquire%20about%20edible%20oils." target="_blank" rel="noopener" class="nav-cta">Contact Us</a>
+    <div class="nav-explore">
+      <div class="nav-avatar">SE</div>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#products" onclick="closeMenu()">Products</a>
+  <a href="#track" onclick="closeMenu()">Track</a>
+  <a href="#faq" onclick="closeMenu()">FAQ</a>
+  <a href="https://wa.me/916363785364?text=Hello%20Swastik%20Eximp,%20I%20would%20like%20to%20get%20in%20touch." target="_blank" rel="noopener" onclick="closeMenu()">💬 WhatsApp Us</a>
+  <a href="tel:+916363785364" onclick="closeMenu()">📞 +91 63637 85364</a>
+</div>
+
+<!-- ─── HERO ──────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-headline">
+    <div class="hero-tagline">✦ Karnataka's Trusted Import Agency</div>
+    <h1>YOUR EDIBLE OIL<br><span class="red-word">IMPORT</span> SOLUTION</h1>
+  </div>
+  <div class="hero-img-wrap">
+    <img
+      src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1600&q=85&auto=format&fit=crop"
+      alt="Cargo ship loaded with containers at sea"
+      loading="eager"
+    />
+    <div class="hero-cards">
+      <div class="hero-card-left">
+        <h3>We source premium oils &amp; deliver to your business.</h3>
+        <a href="#services" class="learn-more">
+          Our Services <span class="arr">↗</span>
+        </a>
+      </div>
+      <div class="hero-card-center" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">▼</div>
+      <div class="hero-card-right">
+        <p>End-to-end oil imports for India's food manufacturers &amp; distributors.</p>
+        <div class="hero-stats-row">
+          <div class="hero-rating-wrap">
+            <div class="stars">★★★★★</div>
+            <div class="hero-rating">4.8 <span>/ 5.0</span></div>
+          </div>
+          <div class="hero-clients">
+            <div class="avatar-stack">
+              <div style="background:#C8201A;color:#fff;">M</div>
+              <div style="background:#2563EB;color:#fff;">B</div>
+              <div style="background:#059669;color:#fff;">S</div>
+            </div>
+            <div class="clients-text">
+              <strong>120+</strong>
+              Satisfied Clients
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── MARQUEE ────────────────────────────────────────────── -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <!-- set 1 -->
+    <div class="marquee-item"><span class="dot"></span> CP10 Palm Oil</div>
+    <div class="marquee-item"><span class="dot"></span> Refined Sunflower Oil</div>
+    <div class="marquee-item"><span class="dot"></span> JNPT Cleared</div>
+    <div class="marquee-item"><span class="dot"></span> Pan-India Dispatch</div>
+    <div class="marquee-item"><span class="dot"></span> GST Compliant</div>
+    <div class="marquee-item"><span class="dot"></span> 100% Documentation</div>
+    <div class="marquee-item"><span class="dot"></span> B2B Import Agency</div>
+    <div class="marquee-item"><span class="dot"></span> Malaysia & Thailand Origin</div>
+    <div class="marquee-item"><span class="dot"></span> Chikkaballapur, Karnataka</div>
+    <div class="marquee-item"><span class="dot"></span> FSSAI Standards</div>
+    <!-- set 2 (duplicate for loop) -->
+    <div class="marquee-item"><span class="dot"></span> CP10 Palm Oil</div>
+    <div class="marquee-item"><span class="dot"></span> Refined Sunflower Oil</div>
+    <div class="marquee-item"><span class="dot"></span> JNPT Cleared</div>
+    <div class="marquee-item"><span class="dot"></span> Pan-India Dispatch</div>
+    <div class="marquee-item"><span class="dot"></span> GST Compliant</div>
+    <div class="marquee-item"><span class="dot"></span> 100% Documentation</div>
+    <div class="marquee-item"><span class="dot"></span> B2B Import Agency</div>
+    <div class="marquee-item"><span class="dot"></span> Malaysia & Thailand Origin</div>
+    <div class="marquee-item"><span class="dot"></span> Chikkaballapur, Karnataka</div>
+    <div class="marquee-item"><span class="dot"></span> FSSAI Standards</div>
+  </div>
+</div>
+
+<!-- ─── ABOUT ─────────────────────────────────────────────── -->
+<section class="about" id="about">
+  <div class="about-left reveal">
+    <div class="eyebrow">About Us</div>
+    <h2>Who We Are</h2>
+    <p class="about-desc">
+      Swastik Eximp is a Karnataka-based import agency dedicated to redefining how premium edible oils reach India's food industry. Our network of certified overseas refineries, combined with experienced trade professionals, guarantees timely and compliant delivery — regardless of destination.
+    </p>
+    <div class="accord-list">
+      <div class="accord-item open">
+        <button class="accord-trigger" onclick="toggleAccord(this)">
+          <span>Reliability</span>
+          <span class="acc-icon">+</span>
+        </button>
+        <div class="accord-body">
+          <p>Every order is backed by a formal quotation and confirmed contract. 10% advance via LC/RTGS, balance on Lorry Receipt — no ambiguity, no last-minute surprises.</p>
+        </div>
+      </div>
+      <div class="accord-item">
+        <button class="accord-trigger" onclick="toggleAccord(this)">
+          <span>Quality Assurance</span>
+          <span class="acc-icon">+</span>
+        </button>
+        <div class="accord-body">
+          <p>All materials must meet agreed specifications. Buyers have full inspection rights at the dispatch point. Any quality deviation may lead to rejection — we hold ourselves to that standard.</p>
+        </div>
+      </div>
+      <div class="accord-item">
+        <button class="accord-trigger" onclick="toggleAccord(this)">
+          <span>Eco-Friendly Sourcing</span>
+          <span class="acc-icon">+</span>
+        </button>
+        <div class="accord-body">
+          <p>We partner with refineries that follow responsible palm cultivation and sunflower processing standards, ensuring our supply chain meets global sustainability benchmarks.</p>
+        </div>
+      </div>
+      <div class="accord-item">
+        <button class="accord-trigger" onclick="toggleAccord(this)">
+          <span>Full Documentation</span>
+          <span class="acc-icon">+</span>
+        </button>
+        <div class="accord-body">
+          <p>Tax Invoice, E-Way Bill, Lorry Receipt, and Weight Slip provided on every shipment. Fully GST-compliant, audit-ready, and clean at all times.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="about-right reveal reveal-delay-2">
+    <img
+      src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&q=80&auto=format&fit=crop"
+      alt="Quality oil packaging and inspection"
+    />
+    <div class="about-right-badge">
+      <div>
+        <div class="badge-label">Loading Port</div>
+        <div class="badge-val">JNPT, Mumbai</div>
+      </div>
+      <div class="badge-divider"></div>
+      <div style="text-align:right">
+        <div class="badge-label">GSTIN</div>
+        <div class="badge-val" style="font-size:13px;letter-spacing:0.5px;">29IHZPM1485H1ZB</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── STATS ─────────────────────────────────────────────── -->
+<div class="stats reveal" id="stats">
+  <div class="stats-left">
+    <div class="eyebrow" style="color:rgba(255,255,255,0.35);">By The Numbers</div>
+    <h2>Our Trade Numbers</h2>
+    <p>Trusted by food manufacturers, distributors, and FMCG companies across India for consistent, timely edible oil imports from South-East Asia.</p>
+    <a href="https://wa.me/916363785364?text=Hello%20Swastik%20Eximp,%20I%20would%20like%20to%20request%20a%20quote%20for%20edible%20oils." target="_blank" rel="noopener" class="stats-cta">Get a Quote →</a>
+  </div>
+  <div class="stats-grid">
+    <div class="stat-item reveal reveal-delay-1">
+      <div class="stat-val" data-target="100" data-suffix="%">0%</div>
+      <div class="stat-label">Documentation<br>Compliance Rate</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-2">
+      <div class="stat-val" data-target="120" data-suffix="+">0</div>
+      <div class="stat-label">Business Clients<br>Served</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-3">
+      <div class="stat-val">24/7</div>
+      <div class="stat-label">Trade Support<br>Available</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-4">
+      <div class="stat-val" data-target="500" data-suffix="+">0</div>
+      <div class="stat-label">Tonnes<br>Dispatched</div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── SERVICES ───────────────────────────────────────────── -->
+<section class="services" id="services">
+  <div class="services-header reveal">
+    <div>
+      <div class="eyebrow">Our Services</div>
+      <h2>Everything You<br>Need to Import</h2>
+    </div>
+    <span class="services-count">06 Services</span>
+  </div>
+  <p class="services-desc reveal reveal-delay-1">
+    End-to-end supply chain solutions for edible oil imports — efficient, reliable, and fully compliant with Indian trade regulations.
+  </p>
+  <div class="services-scroll" id="servicesScroll">
+    <div class="service-card">
+      <div class="service-icon">🌴</div>
+      <div class="service-name">CP10 Palm Oil</div>
+      <div class="service-desc">Malaysian crude, Indian refined. Sourced from Thailand, cleared at JNPT. ₹132/kg + GST. Bulk quantities available with partial dispatch.</div>
+      <a href="https://wa.me/916363785364?text=Hello%20Swastik%20Eximp,%20I%20would%20like%20to%20inquire%20about%20CP10%20Palm%20Oil%20supplies." target="_blank" rel="noopener" class="service-link">Enquire ↗</a>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🌻</div>
+      <div class="service-name">Refined Sunflower Oil</div>
+      <div class="service-desc">Premium refined sunflower oil from Malaysia. ₹143.20/kg + GST. Meets FSSAI standards. Ideal for food manufacturers and large distributors.</div>
+      <a href="https://wa.me/916363785364?text=Hello%20Swastik%20Eximp,%20I%20would%20like%20to%20inquire%20about%20Refined%20Sunflower%20Oil%20supplies." target="_blank" rel="noopener" class="service-link">Enquire ↗</a>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🚢</div>
+      <div class="service-name">Import Procurement</div>
+      <div class="service-desc">Direct sourcing from certified overseas refineries. All goods processed and cleared at JNPT with complete trade documentation.</div>
+      <a href="#about" class="service-link">Learn More ↗</a>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🚛</div>
+      <div class="service-name">Pan-India Dispatch</div>
+      <div class="service-desc">Reliable inland logistics aligned with your schedule. Partial dispatch allowed. Tax Invoice, E-Way Bill, LR &amp; Weight Slip on every shipment.</div>
+      <a href="#track" class="service-link">Track ↗</a>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">📋</div>
+      <div class="service-name">Trade Compliance</div>
+      <div class="service-desc">Full GST-compliant documentation. GSTIN: 29IHZPM1485H1ZB. All records audit-ready. Buyer inspection rights at dispatch point.</div>
+      <a href="#faq" class="service-link">Learn More ↗</a>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🤝</div>
+      <div class="service-name">Contract Management</div>
+      <div class="service-desc">Confidential B2B contracts on confirmed orders. 10% advance via LC/RTGS. Balance on LR. Pricing reviewed on market fluctuations.</div>
+      <a href="https://wa.me/916363785364?text=Hello%20Swastik%20Eximp,%20I%20would%20like%20to%20discuss%20a%20B2B%20import%20contract." target="_blank" rel="noopener" class="service-link">Get Started ↗</a>
+    </div>
+  </div>
+  <div class="services-nav">
+    <button class="snav-btn act" onclick="scrollServices(-1)" aria-label="Scroll left">←</button>
+    <button class="snav-btn" onclick="scrollServices(1)" aria-label="Scroll right">→</button>
+  </div>
+</section>
+
+<!-- ─── PRODUCTS ───────────────────────────────────────────── -->
+<section class="products reveal" id="products">
+  <div class="eyebrow">Products</div>
+  <h2 class="section-h2">Our Oil Portfolio</h2>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-card-img">
+        <img src="assets/images/cp10_palm_oil.png" alt="CP10 Palm Oil" />
+      </div>
+      <div class="product-card-body">
+        <div class="product-tag">🌴 Palm Oil</div>
+        <div class="product-name">CP10 Palm Oil</div>
+        <div class="product-desc">Malaysian crude, Indian refined. Origin: Thailand. Cleared at JNPT, Mumbai. Bulk quantities with flexible partial dispatch. Meets all FSSAI standards.</div>
+        <div class="product-meta">
+          <div class="product-price">₹132<small>/kg + GST</small></div>
+          <a href="https://wa.me/916363785364?text=Hello%20Swastik%20Eximp,%20I%20would%20like%20to%20request%20a%20quote%20for%20CP10%20Palm%20Oil." target="_blank" rel="noopener" class="product-btn">Request Quote ↗</a>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-card-img">
+        <img src="assets/images/sunflower_oil.png" alt="Refined Sunflower Oil" />
+      </div>
+      <div class="product-card-body">
+        <div class="product-tag">🌻 Sunflower Oil</div>
+        <div class="product-name">Refined Sunflower Oil</div>
+        <div class="product-desc">Premium refined sunflower oil. Origin: Malaysia. Cleared at JNPT, Mumbai. Ideal for food manufacturers, FMCG brands, and large distributors.</div>
+        <div class="product-meta">
+          <div class="product-price">₹143.20<small>/kg + GST</small></div>
+          <a href="https://wa.me/916363785364?text=Hello%20Swastik%20Eximp,%20I%20would%20like%20to%20request%20a%20quote%20for%20Refined%20Sunflower%20Oil." target="_blank" rel="noopener" class="product-btn">Request Quote ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TRACK ──────────────────────────────────────────────── -->
+<div class="track reveal" id="track">
+  <div class="track-content">
+    <div class="eyebrow" style="color:rgba(255,255,255,0.3);">Tracking</div>
+    <h2>Track Your Shipment</h2>
+    <p class="track-sub">Enter your Lorry Receipt (LR) number or Tracking ID to get the latest status of your shipment.</p>
+    <div class="track-input-wrap">
+      <input class="track-input" id="trackInput" type="text" placeholder="Enter LR / Tracking ID…" />
+      <button class="track-submit" onclick="trackShipment()">Track →</button>
+    </div>
+    <div class="track-result" id="trackResult">
+      <div class="track-result-title" id="trackTitle"></div>
+      <div class="track-result-status" id="trackStatus"></div>
+      <div class="track-result-badge" id="trackBadge"></div>
+    </div>
+    <div class="map-dots">
+      <div class="map-dot">
+        <div class="dot-circle active">MY</div>
+        <span class="dot-label">Malaysia<br><small style="color:rgba(255,255,255,0.25);">Origin</small></span>
+      </div>
+      <div class="map-dot">
+        <div class="dot-circle active">TH</div>
+        <span class="dot-label">Thailand<br><small style="color:rgba(255,255,255,0.25);">Source</small></span>
+      </div>
+      <div class="map-dot">
+        <div class="dot-circle active">JNPT</div>
+        <span class="dot-label">Mumbai Port<br><small style="color:rgba(255,255,255,0.25);">Clearance</small></span>
+      </div>
+      <div class="map-dot">
+        <div class="dot-circle" id="dotKA">KA</div>
+        <span class="dot-label">Karnataka<br><small style="color:rgba(255,255,255,0.25);">Dispatch</small></span>
+      </div>
+      <div class="map-dot">
+        <div class="dot-circle" id="dotPAN">PAN</div>
+        <span class="dot-label">Pan India<br><small style="color:rgba(255,255,255,0.25);">Delivery</small></span>
+      </div>
+    </div>
+  </div>
+  <svg class="world-map" viewBox="0 0 1000 500" fill="none" xmlns="http://www.w3.org/2000/svg" height="280">
+    <path d="M130,200 Q200,160 280,180 Q340,190 360,170 Q400,150 440,160 Q480,170 500,155 Q540,140 580,155 Q620,165 650,150 Q700,130 750,145 Q800,160 840,145 Q880,135 920,150" stroke="white" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <path d="M80,240 Q140,220 200,235 Q260,250 300,240 Q360,225 420,240 Q480,255 520,240 Q580,220 640,235 Q700,250 750,235 Q820,215 880,230 Q930,240 960,225" stroke="white" stroke-width="1" fill="none" opacity="0.3"/>
+    <path d="M200,300 Q280,280 360,295 Q440,310 500,295 Q580,278 660,293 Q740,308 820,290 Q880,278 940,285" stroke="white" stroke-width="0.8" fill="none" opacity="0.18"/>
+    <circle cx="650" cy="200" r="5" fill="#C8201A" opacity="0.9"/>
+    <circle cx="680" cy="180" r="5" fill="#C8201A" opacity="0.9"/>
+    <circle cx="580" cy="210" r="5" fill="#C8201A" opacity="0.9"/>
+    <circle cx="540" cy="225" r="3" fill="white" opacity="0.5"/>
+    <circle cx="720" cy="195" r="3" fill="white" opacity="0.5"/>
+    <circle cx="620" cy="230" r="3" fill="white" opacity="0.3"/>
+  </svg>
+</div>
+
+<!-- ─── FAQ ────────────────────────────────────────────────── -->
+<section class="faq" id="faq">
+  <div class="faq-left reveal">
+    <div class="eyebrow">FAQ</div>
+    <h2>Frequently<br>Asked<br>Questions</h2>
+    <p>Can't find an answer? Reach out directly.</p>
+    <a href="https://wa.me/916363785364?text=Hello%20Swastik%20Eximp,%20I%20have%20a%20question%20about%20your%20services." target="_blank" rel="noopener" class="faq-contact-link">WhatsApp Us ↗</a>
+  </div>
+  <div class="faq-list reveal reveal-delay-1">
+    <div class="faq-item open">
+      <button class="faq-trigger" onclick="toggleFaq(this)">
+        <span>What edible oils do you supply?</span>
+        <span class="fq-icon">+</span>
+      </button>
+      <div class="faq-body">
+        <p>We currently supply CP10 Palm Oil (Malaysian crude, Indian refined, origin Thailand) at ₹132/kg + GST, and Refined Sunflower Oil (origin Malaysia) at ₹143.20/kg + GST. Both are dispatched Ex-JNPT with full documentation. More products are available on enquiry.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-trigger" onclick="toggleFaq(this)">
+        <span>What are the payment terms?</span>
+        <span class="fq-icon">+</span>
+      </button>
+      <div class="faq-body">
+        <p>We require 10% advance via LC or RTGS to confirm an order. The remaining balance is settled on Lorry Receipt (LR). Advance is fully settled at the end of the contract period.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-trigger" onclick="toggleFaq(this)">
+        <span>Can I inspect goods before dispatch?</span>
+        <span class="fq-icon">+</span>
+      </button>
+      <div class="faq-body">
+        <p>Yes. Buyers have full inspection rights at the dispatch point (Ex-JNPT). Any deviation from agreed specifications can be inspected and verified prior to loading, and any variance can lead to rejection.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-trigger" onclick="toggleFaq(this)">
+        <span>Is partial dispatch allowed?</span>
+        <span class="fq-icon">+</span>
+      </button>
+      <div class="faq-body">
+        <p>Yes, partial dispatch is permitted. We align our logistics and delivery schedule to match your confirmed downstream requirements throughout the contract period.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-trigger" onclick="toggleFaq(this)">
+        <span>What documentation is provided on delivery?</span>
+        <span class="fq-icon">+</span>
+      </button>
+      <div class="faq-body">
+        <p>Every shipment is accompanied by a Tax Invoice, E-Way Bill, Lorry Receipt (LR), and Weight Slip. All documentation is fully GST-compliant and audit-ready.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA ────────────────────────────────────────────────────────── -->
+<section class="cta reveal" id="cta">
+  <h2>Secure Your Oil Supply Today</h2>
+  <p>Partner with Swastik Eximp for streamlined edible oil procurement, absolute compliance, and reliable logistics tailored to your manufacturing schedule.</p>
+  <a href="https://wa.me/916363785364?text=Hello%20Swastik%20Eximp,%20I%20would%20like%20to%20request%20a%20free%20quote%20for%20bulk%20oil%20supplies." target="_blank" rel="noopener" class="cta-btn" id="ctaBtn">
+    Get a Free Quote
+    <span class="cta-btn-icon">→</span>
+  </a>
+  <div class="cta-contact-row">
+    <div class="cta-contact-item">
+      <span>WhatsApp:</span>
+      <a href="https://wa.me/916363785364?text=Hello%20Swastik%20Eximp,%20I%20would%20like%20to%20get%20in%20touch." target="_blank" rel="noopener">Chat Now</a>
+    </div>
+    <div class="cta-contact-item">
+      <span>Call:</span>
+      <a href="tel:+916363785364">+91 63637 85364</a>
+    </div>
+    <div class="cta-contact-item">
+      <span>Alternative:</span>
+      <a href="tel:+919886759548">+91 98867 59548</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─────────────────────────────────────────────────────── */ -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="assets/images/logo.png" alt="Swastik Eximp Logo" style="height:48px; width:auto; object-fit:contain; display:block; margin-bottom:12px;">
+      <p>Karnataka's premier B2B edible oil import agency. Connecting global producers to Indian manufacturers with total regulatory alignment.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <a href="#about">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#products">Products</a>
+      <a href="#track">Track Shipment</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Information</h4>
+      <span>✉ swastikeximp@gmail.com</span>
+      <span>📞 +91 63637 85364</span>
+      <span>📞 +91 98867 59548</span>
+      <span>📍 Diguru, Chikkaballapur, Karnataka</span>
+    </div>
+    <div class="footer-col">
+      <h4>Trade Compliance</h4>
+      <span>GSTIN: 29IHZPM1485H1ZB</span>
+      <span>Point of Loading: Ex-JNPT, Mumbai</span>
+      <span>FSSAI Compliant Supply Chain</span>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© <span id="footerYear">2026</span> Swastik Eximp. All rights reserved.</div>
+    <div class="footer-social">
+      <span class="social-icon" aria-label="LinkedIn">in</span>
+      <span class="social-icon" aria-label="Twitter">t</span>
+      <span class="social-icon" aria-label="Facebook">f</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ─── INTERACTION SCRIPTS ───────────────────────────────────────── -->
+<script>
+// Scroll state for nav background styling
+window.addEventListener('scroll', function() {
+  const nav = document.getElementById('nav');
+  if (window.scrollY > 30) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
+
+// Mobile menu toggles
+function toggleMenu() {
+  const menu = document.getElementById('mobileMenu');
+  menu.classList.toggle('open');
+}
+
+function closeMenu() {
+  const menu = document.getElementById('mobileMenu');
+  menu.classList.remove('open');
+}
+
+// Accordion toggle
+function toggleAccord(btn) {
+  const item = btn.closest('.accord-item');
+  const list = btn.closest('.accord-list');
+  const isOpen = item.classList.contains('open');
+  
+  if (list) {
+    list.querySelectorAll('.accord-item').forEach(i => i.classList.remove('open'));
+  }
+  
+  if (!isOpen) {
+    item.classList.add('open');
+  }
+}
+
+// FAQ accordion toggle
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const list = btn.closest('.faq-list');
+  const isOpen = item.classList.contains('open');
+  
+  if (list) {
+    list.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  }
+  
+  if (!isOpen) {
+    item.classList.add('open');
+  }
+}
+
+// Horizontal services scroll
+function scrollServices(direction) {
+  const scrollContainer = document.getElementById('servicesScroll');
+  const scrollAmount = 300;
+  scrollContainer.scrollBy({
+    left: direction * scrollAmount,
+    behavior: 'smooth'
+  });
+}
+
+// Mock shipment tracking tool
+function trackShipment() {
+  const input = document.getElementById('trackInput').value.trim();
+  const resultDiv = document.getElementById('trackResult');
+  const title = document.getElementById('trackTitle');
+  const status = document.getElementById('trackStatus');
+  const badge = document.getElementById('trackBadge');
+  
+  if (!input) {
+    alert("Please enter a Lorry Receipt (LR) number or Tracking ID.");
+    return;
+  }
+  
+  resultDiv.classList.add('show');
+  
+  // Highlight map elements based on tracking status
+  const dotKA = document.getElementById('dotKA');
+  const dotPAN = document.getElementById('dotPAN');
+  
+  const normInput = input.toLowerCase();
+  
+  if (normInput === 'delivered' || normInput === '100%') {
+    title.innerText = "Lorry Receipt: " + input.toUpperCase();
+    status.innerHTML = "<strong>Status:</strong> Consignment successfully delivered and weighed at destination warehouse.<br><strong>Received Date:</strong> " + new Date().toLocaleDateString() + "<br><strong>Weight Slip:</strong> Verified and signed.";
+    badge.innerText = "DELIVERED";
+    badge.style.background = "rgba(16, 185, 129, 0.2)";
+    badge.style.color = "#10B981";
+    
+    // Activate all route dots
+    if (dotKA) dotKA.classList.add('active');
+    if (dotPAN) dotPAN.classList.add('active');
+  } else if (normInput.startsWith('lr-') || input.length >= 4) {
+    title.innerText = "Lorry Receipt: " + input.toUpperCase();
+    status.innerHTML = "<strong>Status:</strong> Cargo cleared Ex-JNPT Port. Dispatched via logistics partner.<br><strong>Current Location:</strong> In transit near Hubli, Karnataka.<br><strong>ETA:</strong> Expected within 24-48 hours.";
+    badge.innerText = "IN TRANSIT";
+    badge.style.background = "rgba(245, 158, 11, 0.2)";
+    badge.style.color = "#F59E0B";
+    
+    // Activate KA route dot
+    if (dotKA) dotKA.classList.add('active');
+    if (dotPAN) dotPAN.classList.remove('active');
+  } else {
+    title.innerText = "Shipment ID Not Found";
+    status.innerText = "No active shipment found matching this number. Please check the Lorry Receipt or alternative consignment documents.";
+    badge.innerText = "PENDING / UNKNOWN";
+    badge.style.background = "rgba(239, 68, 68, 0.2)";
+    badge.style.color = "#EF4444";
+    
+    // Reset route dots
+    if (dotKA) dotKA.classList.remove('active');
+    if (dotPAN) dotPAN.classList.remove('active');
+  }
+}
+
+// Fade in scroll animations (Intersection Observer)
+document.addEventListener('DOMContentLoaded', function() {
+  // Set footer dynamic year
+  const footerYear = document.getElementById('footerYear');
+  if (footerYear) {
+    footerYear.textContent = new Date().getFullYear();
+  }
+
+  // Fade elements reveal observer
+  const reveals = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
       }
-    </script>
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container nav-container">
-        <a class="brand" href="#">Swastik Eximp</a>
-        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
-        <nav class="main-nav" id="main-nav">
-          <a href="#about" class="nav-link">About</a>
-          <a href="#products" class="nav-link">Products</a>
-          <a href="#markets" class="nav-link">Markets</a>
-          <a href="#why" class="nav-link">Why Us</a>
-          <a href="#contact" class="nav-link cta">Contact</a>
-        </nav>
-      </div>
-    </header>
+    });
+  }, { threshold: 0.1 });
+  
+  reveals.forEach(function(el) {
+    revealObserver.observe(el);
+  });
 
-    <main>
-      <section class="hero" aria-label="Hero">
-        <div class="container hero-inner">
-          <div class="hero-copy reveal">
-            <h1>Connecting India to the World</h1>
-            <p class="lead">Premium exports of spices, textiles and agricultural products — compliant, traceable and delivered on time to global partners.</p>
-            <p>
-              <a href="#contact" class="btn btn-primary">Get In Touch</a>
-              <a href="#products" class="btn btn-ghost" style="margin-left:12px">Our Products</a>
-            </p>
-            <div class="trust-row">
-              <span class="badge">ISO Certified</span>
-              <span class="badge">On-time Delivery</span>
-              <span class="badge">Global Reach</span>
-            </div>
-          </div>
-          <div class="hero-visual reveal" aria-hidden="true">
-            <img src="assets/images/hero.svg" alt="Globe illustration" class="globe-img" loading="lazy">
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="section about">
-        <div class="container">
-          <h2>About Swastik Eximp</h2>
-          <p>Swastik Eximp is an international export company based in India, delivering premium commodities to buyers worldwide. We combine deep market expertise, rigorous quality control and efficient logistics to serve distributors, wholesalers and retailers across regions.</p>
-        </div>
-      </section>
-
-      <section id="products" class="section products">
-        <div class="container">
-          <h2>Product Categories</h2>
-          <p class="muted">We export carefully sourced, inspected and packaged commodities that meet international buyer expectations.</p>
-          <div class="grid">
-            <div class="card reveal" data-product="Spices">
-              <h3>Spices</h3>
-              <p>Premium pepper, turmeric, cumin and blended spice mixes — traceable to certified farms with standardized packaging options.</p>
-              <div class="meta">Standards: FSSAI, APEDA, ISO | MOQ: 1 MT | Packaging: 25–50 kg kraft bags</div>
-              <div class="actions"><button class="btn btn-primary inquire">Inquire</button></div>
-            </div>
-            <div class="card reveal" data-product="Textiles">
-              <h3>Textiles</h3>
-              <p>Woven and knitted fabrics, finished garments with quality checks and export-compliant labeling.</p>
-              <div class="meta">Standards: OEKO-TEX, ISO | MOQ: 500 pcs | Packaging: palletized bundles</div>
-              <div class="actions"><button class="btn btn-primary inquire">Inquire</button></div>
-            </div>
-            <div class="card reveal" data-product="Agricultural Products">
-              <h3>Agricultural Products</h3>
-              <p>Grains, pulses and specialty commodities, processed and packed to meet destination country requirements.</p>
-              <div class="meta">Standards: APEDA, FSSAI, ISO | MOQ: 2 MT | Packaging: bulk bags / consumer packs</div>
-              <div class="actions"><button class="btn btn-primary inquire">Inquire</button></div>
-            </div>
-            <div class="card reveal" data-product="Other Commodities">
-              <h3>Other Commodities</h3>
-              <p>Custom export lines on request — food ingredients, herbs and other specialty items with documentation support.</p>
-              <div class="meta">Standards: As required | MOQ: Varies | Packaging: custom</div>
-              <div class="actions"><button class="btn btn-primary inquire">Inquire</button></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="markets" class="section markets">
-        <div class="container reveal">
-          <h2>Markets We Serve</h2>
-          <p class="muted">We ship to distributors and partners across Asia, Europe, Middle East, Africa and the Americas.</p>
-          <div style="margin-top:1rem">
-            <!-- Simple world map svg placeholder -->
-            <img src="assets/images/og.svg" alt="World map" style="max-width:420px" loading="lazy">
-          </div>
-        </div>
-      </section>
-
-      <section id="why" class="section why">
-        <div class="container two-col">
-          <div>
-            <h2>Why Choose Us</h2>
-            <div class="why-grid">
-              <div class="why-card reveal">
-                <svg class="why-icon" viewBox="0 0 24 24" width="36" height="36"><circle cx="12" cy="12" r="10" fill="var(--color-primary)"/></svg>
-                <h3>Quality & Compliance</h3>
-                <p class="muted">ISO processes, FSSAI & APEDA compliance across supply chains.</p>
-              </div>
-              <div class="why-card reveal">
-                <svg class="why-icon" viewBox="0 0 24 24" width="36" height="36"><rect x="2" y="4" width="20" height="16" rx="2" fill="var(--color-secondary)"/></svg>
-                <h3>Reliable Logistics</h3>
-                <p class="muted">Trusted freight partners and on-time delivery performance.</p>
-              </div>
-              <div class="why-card reveal">
-                <svg class="why-icon" viewBox="0 0 24 24" width="36" height="36"><path d="M2 12h20" stroke="var(--color-primary)" stroke-width="2"/></svg>
-                <h3>Global Reach</h3>
-                <p class="muted">Export experience and customs expertise across major markets.</p>
-              </div>
-            </div>
-          </div>
-          <div class="trust-badges">
-            <div class="badge-block reveal">
-              <svg class="badge-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="var(--color-primary)"/></svg>
-              <div class="badge-text"><strong>ISO Certified</strong><span>Certified processes</span></div>
-            </div>
-            <div class="badge-block reveal">
-              <svg class="badge-icon" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" fill="var(--color-secondary)"/></svg>
-              <div class="badge-text"><strong>On-time Delivery</strong><span>Logistics & tracking</span></div>
-            </div>
-            <div class="badge-block reveal">
-              <svg class="badge-icon" viewBox="0 0 24 24"><path d="M2 12h20" stroke="var(--color-primary)" stroke-width="2"/></svg>
-              <div class="badge-text"><strong>Global Reach</strong><span>Networks across continents</span></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section contact">
-        <div class="container">
-          <h2>Client Inquiry</h2>
-          <p>Tell us about your requirements — we'll get back with tailored quotes and lead-times.</p>
-          <form id="contact-form" class="contact-form" name="contact" data-netlify="true" data-endpoint="" novalidate>
-            <input type="hidden" name="form-name" value="contact">
-            <div class="form-grid">
-              <label><span>Name</span><input class="form-control" type="text" name="name" required><div class="field-error" data-for="name"></div></label>
-              <label><span>Company</span><input class="form-control" type="text" name="company"></label>
-              <label><span>Email</span><input class="form-control" type="email" name="email" required><div class="field-error" data-for="email"></div></label>
-              <label><span>Country</span><input class="form-control" type="text" name="country"></label>
-              <label class="full"><span>Product / Interest</span><input class="form-control" type="text" name="product" id="product-field"></label>
-              <label class="full"><span>Message</span><textarea class="form-control" name="message" rows="5"></textarea></label>
-            </div>
-            <div class="form-actions">
-              <button type="submit" class="btn btn-primary">Send Inquiry</button>
-              <div id="form-msg" class="form-msg" role="status" aria-live="polite"></div>
-            </div>
-          </form>
-        </div>
-      </section>
-
-      <!-- Product inquiry modal -->
-      <div id="modal-backdrop" class="modal-backdrop" aria-hidden="true">
-        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-            <h3 id="modal-title">Product Inquiry</h3>
-            <button id="modal-close" aria-label="Close">✕</button>
-          </div>
-          <p class="muted">Complete the form and our export team will reply with pricing and lead-times.</p>
-          <div id="modal-body"></div>
-        </div>
-      </div>
-
-      <!-- WhatsApp CTA -->
-      <a class="whatsapp-cta" href="https://wa.me/919999999999?text=Hello%20Swastik%20Eximp" target="_blank" rel="noopener">WhatsApp</a>
-
-      <!-- Cookie banner -->
-      <div id="cookie-banner" class="cookie-banner" style="display:none">
-        <div style="flex:1">We use cookies to improve your experience. By continuing, you agree to our use of cookies.</div>
-        <div><button id="accept-cookies" class="btn btn-primary">Accept</button></div>
-      </div>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div class="footer-left">© <span id="year"></span> Swastik Eximp — All rights reserved.</div>
-        <div class="footer-right social">
-          <a href="#" aria-label="LinkedIn">LinkedIn</a>
-          <a href="#" aria-label="Twitter">Twitter</a>
-          <a href="#" aria-label="Instagram">Instagram</a>
-        </div>
-      </div>
-    </footer>
-
-    <script src="assets/js/main.js" defer></script>
-  </body>
+  // Animated number counter for stats numbers
+  const statsValues = document.querySelectorAll('.stat-val[data-target]');
+  const statsObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.getAttribute('data-target'), 10);
+        const suffix = el.getAttribute('data-suffix') || '';
+        let count = 0;
+        const duration = 1200;
+        const increment = target / (duration / 16);
+        
+        const counter = setInterval(function() {
+          count += increment;
+          if (count >= target) {
+            el.innerText = target + suffix;
+            clearInterval(counter);
+          } else {
+            el.innerText = Math.floor(count) + suffix;
+          }
+        }, 16);
+        
+        statsObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  
+  statsValues.forEach(function(el) {
+    statsObserver.observe(el);
+  });
+});
+</script>
+</body>
 </html>
